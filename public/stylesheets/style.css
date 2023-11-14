@@ -1,0 +1,280 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+  /* cursor: none; */
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-Black.ttf') format('truetype');
+  font-weight: 900; /* Black */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-BlackItalic.ttf') format('truetype');
+  font-weight: 900; /* BlackItalic */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700; /* Bold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-BoldItalic.ttf') format('truetype');
+  font-weight: 700; /* BoldItalic */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-Extrabold.ttf') format('truetype');
+  font-weight: 800; /* Extrabold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-ExtraboldItalic.ttf') format('truetype');
+  font-weight: 800; /* ExtraboldItalic */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300; /* Light */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-LightItalic.ttf') format('truetype');
+  font-weight: 300; /* LightItalic */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-MediumItalic.ttf') format('truetype');
+  font-weight: 500; /* MediumItalic */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400; /* Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-RegularItalic.ttf') format('truetype');
+  font-weight: 400; /* RegularItalic */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'gilroy';
+  src: url('./font/Gilroy-Semibold.ttf') format('truetype');
+  font-weight: 600; /* Semibold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: drawn;
+  src: url("./font/drawnbody-webfont.ttf");
+}
+
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  background-color: #ffc300;
+  flex-direction: column;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#nav{
+  height: 3.5vw;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1%;
+}
+
+#shery{
+  height: 100%;
+  width: 20%;
+  position: relative;
+  /* background-color: white; */
+  /* background-i mage: url("../images/Sumit-black.png"); */
+  background-size: cover;
+  background-position: center 46%;
+}
+
+#links{
+  font-family: drawn;
+  height: inherit;
+  width: 14%;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  margin-right: 0.5%;
+}
+
+#links a{
+  color: #434343;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+#loader {
+  height: 100vh;
+  font-family:gilroy;
+  font-weight: 100;
+  width: 100vw;
+  background-color: rgb(237, 255, 254);
+  position: absolute;
+  display: flex;
+  z-index: 999;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#intro p{
+  font-weight: 400;
+  font-size: 1.7em;
+}
+#intro h2{
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3.2em;
+  display: block;
+  height: 1.4em;
+  overflow: hidden;
+  position: relative;
+}
+#intro span {
+  display: block;
+  position: relative;
+}
+#center{
+  background-color: #ffc300;
+  height: 0vh;
+  width: 0vh;
+  border-radius: 50%;
+  z-index: 999;
+  position: absolute;
+}
+#center::-webkit-scrollbar{
+  display: none;
+}
+
+#name{
+  font-family: drawn;
+  display: flex;
+}
+.word{
+  display: flex;
+  margin-right: 2em;
+  height: 16vh;
+  overflow: hidden;
+}
+.word img{
+  height: 32vh;
+  position: relative;
+  z-index: 1;
+}
+.a, .t{
+  transform: translateY(-100%);
+}:hover{
+  transform: translateY(0%);
+}
+#desc{
+  font-family: drawn;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.2em;
+  color: #434343;
+  font-weight: bold;
+}
+
+#buttons{
+  text-align: center;
+  margin-top: 4%;
+}
+
+#buttons a{
+  margin-right: 1%;
+  background-color: cyan;
+  padding: 0.5em 1.5em;
+  font-family: drawn;
+  color: #fff;
+  text-decoration: none;
+  font-size: large;
+  font-weight: 600;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 0.3em;
+  text-transform: uppercase;
+}
+
+#buttons a:hover{
+  box-shadow: #434343 8px 8px 0 0;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  background-color: #ffffff3c;
+}
+
+#footer{
+  background-color: rgba(255, 255, 255, 0.598); 
+  height: 3.3vw;
+  padding: 0.5em 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#socials{
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  width: 18%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#socials a{
+  height: 100%;
+  width: 13%;
+}
+
+#elem img{
+  height: 100%;
+  cursor: pointer;
+  width: 100%;
+} 

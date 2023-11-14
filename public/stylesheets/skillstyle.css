@@ -1,0 +1,252 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html,body{
+    height: 100%;
+    width: 100%;
+    /* cursor: none; */
+}
+
+#shery{
+    height: 110%;
+    width: 16%;
+}
+
+#shery img{
+    height: 130%;
+    width: 100%;
+}
+
+
+@font-face {
+    font-family: drawn;
+    src: url("./font/drawnbody-webfont.ttf");
+  }
+
+#bg-solar{
+    background-image: url("https://www.adamhartwig.co.uk/images/screens/skills/map/title.png");
+    background-position: center 44%;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    background-color: #333333;
+    height: 100vh;
+    display: flex;
+    font-family: drawn;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+}
+
+#solar-system{
+    position: relative;
+    height: 60vh;
+    width: 100vw;
+    background-position: center 40%;
+    background-size: 62%;
+    background-repeat: no-repeat;
+    background-image: url("https://www.adamhartwig.co.uk/images/screens/skills/map/solar-system.png");
+    /* background-color: #333333; */
+}
+
+#sun{
+    position: absolute;
+    left: 48.5%;
+    top: 41%;
+    z-index: 99;
+    transform: translate(-50%);
+    height: 6vh;
+    background-image: url("https://www.adamhartwig.co.uk/images/screens/skills/map/planets/sun/small-planet.png");
+    width: 6vh;
+    background-size: cover;
+    animation-name: orbit;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction:normal;
+    animation-fill-mode: forwards;
+}
+
+.planet{
+    background-image: url("https://www.adamhartwig.co.uk/images/made/37ad884cdc8bc8cd/small-planet@2x_38_38_c1.png");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    top: 90%;
+    border-radius: 50%;
+}
+
+.planetinfo{
+    position: relative;
+    z-index: 999;
+    display:none;
+    font-weight: 800;
+    font-size: 0.8em;
+    color: #dadada;
+    justify-content: center;
+    top: -6.5em;
+    left: 75%;
+    font-family: drawn;
+    transform: translateX(-0%) rotate(90deg);
+    height: 15em;
+    width: 6em;
+    background-repeat: no-repeat;
+    background-image: url("https://www.adamhartwig.co.uk/images/screens/skills/map/info-marker.png");
+    background-size: contain;
+    background-position: center;
+}
+
+.planetinfo p{
+    text-align: center;
+    position: relative;
+    top: 38%;
+}
+
+.mercury{
+    width: 1.3em;
+    height: 1.3em;
+}
+
+.venus{
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.earth{
+    width: 1.9em;
+    height: 1.9em;
+}
+
+.mars{
+    width: 1.95em;
+    height: 1.95em;
+}
+
+.jupiter{
+    width: 2.5em;
+    height: 2.5em;
+}
+
+.saturn{
+    width: 2.15em;
+    height: 2.15em;
+}
+
+.uranus{
+    width: 2em;
+    height: 2em;
+}
+
+.neptune{
+    width: 2.1em;
+    height: 2.1em;
+}
+
+.pluto{
+    width: 1.3em;
+    height: 1.3em;
+}
+
+#nav{
+    height: 5vw;
+    width: 60vw;
+    position: relative;
+    top: -3em;
+    margin-left: 6em;
+}
+
+.skill {
+    text-decoration: none;
+    color: #efeeee;
+    text-transform: uppercase;  
+    padding: 0.3em 1.3em;
+    margin-right: 0.7em;
+    background-color: rgba(255, 255, 255, 0.333);
+    font-size: 1em;
+    font-weight: 700;
+    border-radius: 0.5em;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.skill:hover span{
+    top: 0;
+    color: #333333;
+    background-color: #dadada;
+    transition: all ease 0.1s;
+}
+
+.skill span{
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+#up{
+    height: 2vw;
+    width: 100vw;
+    text-align: end;
+    padding: 0.5em 1em;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.2em;
+}
+
+#up a{
+    color: #dadada;
+    text-decoration: none;
+}
+
+#footer{
+    background-color: rgba(255, 255, 255, 0.104); 
+    height: 3.3vw;
+    padding: 0.5em 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #socials{
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    /* background-color: white; */
+    width: 18%;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  
+  #socials a{
+    height: 100%;
+    width: 13%;
+  }
+  
+  #elem img{
+    height: 100%;
+    cursor: pointer;
+    width: 100%;
+  }
+
+@keyframes orbit {
+    0% {
+        transform: rotateZ(0deg);
+    }
+
+    100% {
+        transform: rotateZ(-360deg);
+    }
+}
