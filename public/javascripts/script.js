@@ -30,7 +30,7 @@ function loaderAnim() {
             duration:0.5,
             ease:"power4.out"
         })
-    }, 300);
+    }, 4300);
 }
 
 function nameAnim() {
